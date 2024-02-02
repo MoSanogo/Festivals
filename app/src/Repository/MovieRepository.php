@@ -45,4 +45,16 @@ class MovieRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+
+public function findAllByCategory(){
+
+    return $this->createQueryBuilder('movies')
+              ->select('movie')
+              ->from('Movie','movie')
+              ->groupBy('movie.type');
+}
+
+
+
 }

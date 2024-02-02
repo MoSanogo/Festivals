@@ -1,41 +1,143 @@
-{% extends 'base.html.twig' %}
+{%extends "base.html.twig"%}
+{%block title%}
+{{title |escape}}
+{%endblock%}
 
-{% block title %}Movie index{% endblock %}
+{%block body%}
+<!--The movie page starts here-->
+<section class="container movies_listings mt-5 ">
+  <h1 class="text-center mt-2">Make your choice !</h1>
+  <p class="text-center mt-2 p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quasi earum fugiat voluptas expedita necessitatibus laudantium cupiditate nemo quidem .</p>
+  <h2 class="text-center mt-4 p-2">Movies categories</h2>
+  <div class="container d-none d-md-block">
+    <div class="row my-2 p-2 justify-content-between">
+      <div class="col-sm-1">
+        <a href="#action" class="badge rounded-pill text-bg-primary w-100 h-100 ">Action</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#dramas" class="badge rounded-pill text-bg-primary w-100 h-100 ">Dramas</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#classics" class="badge rounded-pill text-bg-primary w-100 h-100 ">Classics</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#comedies" class="badge rounded-pill text-bg-primary w-100 h-100 ">Comedies</a>
+      </div>
+      <div class="col-sm-2 ">
+        <a href="#horror" class="badge rounded-pill text-bg-primary w-100 h-100 ">Horror</a>
+      </div>
+      <div class="col-sm-2">
+        <a href="#romance" class="badge rounded-pill text-bg-primary w-100 h-100 ">Romance</a>
+      </div>
+      <div class="col-sm-1">
+        <a href="#sci-fi" class="badge rounded-pill text-bg-primary w-100 h-100 ">Sci-Fi</a>
+      </div>
+    </div>
+  </div>
+  <div class="container d-md-none">
+    <div class="row my-2 p-2 justify-content-between">
+       <a href="#action" class=" col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5 ">Action</a>
 
-{% block body %}
-    <h1>Movie index</h1>
+      <a href="#dramas" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5 ">Dramas</a>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>ReleaseYear</th>
-                <th>Url</th>
-                <th>Type</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for movie in movies %}
-            <tr>
-                <td>{{ movie.id }}</td>
-                <td>{{ movie.releaseYear ? movie.releaseYear|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ movie.url }}</td>
-                <td>{{ movie.type }}</td>
-                <td>{{ movie.description }}</td>
-                <td>
-                    <a href="{{ path('app_movie_show', {'id': movie.id}) }}">show</a>
-                    <a href="{{ path('app_movie_edit', {'id': movie.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+      <a href="#classics" class=" col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Classics</a>
 
-    <a href="{{ path('app_movie_new') }}">Create new</a>
-{% endblock %}
+      <a href="#comedies" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Comedies</a>
+
+      <a href="#horror" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Horror</a>
+
+      <a href="#romance" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Romance</a>
+
+      <a href="#sci-fi" class="col-sm-12 badge badge-pill badge-secondary bg-primary pt-3 pb-3 pr-5 pl-5">Sci-Fi</a>
+
+    </div>
+  </div>
+  {% for i in 1..6 %}
+  
+  <!--Action-->
+  <div class="container" id="action">
+    <p class="text-monospace text-center display-4 font-weight-bold">
+      Action
+    </p>
+    <div class="row card-group " id="action">
+      <!--Start:The Equalizer-->
+    {%for j in 1..6%}
+    <div class="col-sm-4  card_wrapper " id="card_wrapper" >
+      <div class="row">
+        <div class="col-sm-12   card_front_side_wrapper">
+          <div class="card card_front_side  card_side col-sm-12 ">
+            <img src="{{asset('build/images/doctor_strange.jpg')}}" alt="The Equalizer" class="card-img-top" style="height:25rem;"/>
+            <div class="card-body">
+              <h5 class="card-title text-center">The Equalizer 2</h5>
+              <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, facere.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12  text-center    card_backside_side_wrapper">
+          <div class="card card_back_side card_side col-sm-12  ">
+            <div class="card-body ">
+              <h5 class="card-title mt-2">The Equalizer 2</h5>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="p-2 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut libero ipsa sit aliquam molestias veniam quia ullam nulla error, earum fugiat magni.
+                  </p>
+                </div>
+                <div class="col-sm-12 table-responsive-sm-12">
+                  <table class="table table-hover">
+                    <tr>
+                      <th scope="row">
+                        Directors:
+                      </th>
+                      <td>Antoine Fuqua</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Writers:</th>
+                      <td classs="text-truncate">Richard Wenk Michael Sloan.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        Stars:
+                      </th>
+                      <td>Denzel Washington, Pedro Pascal, Ashton Sanders</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="col-sm-12 mt-1 ">
+                <div class="col-sm-12">
+                  <h5 class="text-monospace font-weight-c">Showtime</h5>
+                  <p>Monday 15th at 6:30pm</p>
+                </div>
+                <div class="col-sm-12 d-none d-md-block"><a href="#popup" class="badge badge-pill badge-secondary d-block bg-primary border-bottom ">Watch the trailer</a></div>
+                <div class="col-sm-12 d-md-none"><a href="https://www.youtube.com/embed/HyNJ3UrGk_I" class="badge badge-pill badge-secondary bg-primary border-bottom d-block" target="_blank">Trailer youtube</a></div>
+                <div class="col-sm-12"><a href="registration_page.html" class="badge badge-pill badge-secondary bg-success d-block">Book it now!</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+    {%endfor%}
+   
+
+      
+    </div>
+  </div>
+
+
+  {%endfor%} 
+</section>
+
+<div class="container d-none d-md-block">
+  <div class="row ">
+    <div class="popup col-sm-12" id="popup">
+      <div class="col-sm-12 popup_close_wrapper"><a href="#action" class="popup_close">&times;</a></div>
+      <div class="popup_content col-sm-12 ">
+        <iframe width="99%" height="99%" class="embed-responsive-item p-1 mx-auto d-block popup_trailer" src="https://www.youtube.com/embed/HyNJ3UrGk_I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+  </div>
+  </div>
+</div>
+
+{%endblock%}
+

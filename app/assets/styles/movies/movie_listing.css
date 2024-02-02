@@ -1,0 +1,115 @@
+
+ .main-wrapper_movies_page {
+    background-color: rgba(255, 255, 255, 1), ;
+  }
+  
+  /*-----------------------------------------Start:card-------------------------------------------*/
+  /*card front side*/
+  .card_wrapper {
+
+    position: relative;
+    height:30rem;
+    margin-bottom: 2.5rem;
+  }
+  
+
+  
+  .card_side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition-delay: .8s;
+    -webkit-transition-delay: .8s;
+    -moz-transition-delay: .8s;
+    -o-transition-delay: .8s;
+    backface-visibility: hidden;
+    border-width: 3px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px 4px grey;
+ 
+  }
+  
+  .card_front_side {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+  }
+  
+  .card_wrapper:hover .card_front_side {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
+  
+  .card_back_side {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+  }
+  
+  .card_wrapper:hover .card_back_side {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+  }
+  
+  .card-title:hover {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+  }
+   /*---Start:Popup_the_equalizer_2--*/
+   .popup {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%,-50%);
+
+    
+  }
+  .popup_close_wrapper{
+    color: grey;
+    position: absolute;
+    top:0%;
+    left: 50%;
+    transform: translate(35%,5%);
+  
+   
+  }
+
+  .popup_close:link, .popup_close:visited {
+    font-size: 2rem;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+
+  .popup_close:hover {
+    color: red;
+  }
+  
+  /*---End:Popup_the_equalizer_2--*/

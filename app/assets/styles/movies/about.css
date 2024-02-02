@@ -1,0 +1,114 @@
+  /*-----------------------------------------------Start:About_Us-----------------------------------------------------------------*/
+  .about_us_page_main_wrapper {
+    background-image: url('about_us_images/main_wrapper_about_us_image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 3px solid black;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: lighten;
+    color: #fff;
+    border-bottom: 3px solid rgba(0, 0, 0, 1);
+  }
+  
+  .social_icons {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 4px 4px #fff;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .social_icons_link:hover {
+    text-decoration: none;
+  }
+  
+  .social_icons:hover {
+    transform: scale(0.8);
+    text-decoration: none;
+  }
+  
+  .about_us_fa-facebook-f {
+    color: #3B5998;
+    text-shadow: 6px 6px 6px #000;
+  }
+  
+  .text_fa-facebook-f_wrapper {
+    background-color: #3B5998;
+    opacity: 0.8;
+  }
+  
+  .about_us_fa-twitter {
+    color: #1DA1F2;
+    text-shadow: 6px 6px 6px #000;
+  }
+  
+  .text_fa-twitter_wrapper {
+    background-color: #1DA1F2;
+    opacity: 0.8;
+  }
+  
+  .about_us_fa-instagram {
+    background-image: linear-gradient(to top, #FED374, #CC3081, #723BBA);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 6px 6px 6px #000;
+  }
+  
+  .text_fa-instagram_wrapper {
+    background-image: linear-gradient(to right, #FED374, #CC3081, #723BBA);
+    opacity: 0.8;
+  }
+  
+  .our_story_header_description {
+    /*----start:column-count -----*/
+    column-count: 3;
+    -webkit-column-count: 3;
+    column-rule-style: outset;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    /*----End:column-count-----*/
+    /*----Start:column-rule starts---*/
+    column-rule: 2px solid lightblue;
+    -webkit-column-rule: 2px solid lightblue;
+    -webkit-column-rule-style: outset;
+    /* Chrome, Safari, Opera */
+    -moz-column-rule: 2px solid lightblue;
+    -moz-column-rule-style: outset;
+    /* Firefox */
+    /*----End:column-rule ends---*/
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .our_story_header_description {
+      -webkit-column-count: 1;
+      /* Chrome, Safari, Opera */
+      -moz-column-count: 1;
+      /* Firefox */
+      column-count: 1;
+    }
+  
+    .about_us_page_main_wrapper {
+      background-color: #fff;
+      color: #000;
+      border-bottom: none;
+    }
+  
+    .social_icons {
+      border: 2px solid #000;
+      border-radius: 8px;
+      box-shadow: 4px 4px #000;
+      overflow: hidden;
+    }
+  }
+  
+  /*----------------------------------------------------End:About_Us-----------------------------------------------------------*/

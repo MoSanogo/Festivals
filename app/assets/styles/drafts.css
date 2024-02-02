@@ -1,0 +1,1093 @@
+body {
+    margin-top: 45px;
+    margin: auto;
+    max-width: 99%;
+  }
+  
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  /*---------------Start:Index page-----------------------------------------------------------------------------------------------*/
+  .main_index_wrapper_primary_area {
+    background-image: url("index_page_images/index_background_image.jpg");
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    background-attachment: scroll;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid black;
+    background-position: 50% 50%;
+    line-height: 1.5rem;
+    margin-top: -2.89rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid rgba(0, 0, 0, 1);
+  }
+  
+  .main_index_wrapper_main_title {
+    margin-top: 10rem;
+  }
+  
+  .main_index_wrapper_main_title:hover {
+    background-image: url('index_page_images/main_index_wrapper_main_title_image.jpg');
+    background-repeat: no-repeat;
+    background-color: #fff;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+    text-shadow: 4px 4px red;
+    background-blend-mode: color-dodge;
+  }
+  
+  .main_index_wrapper_secondary_title {
+    position: relative;
+  }
+  
+  .main_index_wrapper_secondary_title::before {
+    content: open-quote;
+    display: inline-block;
+  }
+  
+  .main_index_wrapper_secondary_title::after {
+    content: close-quote;
+    display: inline-block;
+  }
+  
+  .guest_image_wrapper {
+    width: 15rem;
+    height: 15rem;
+  }
+  
+  .guest_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 2px solid white;
+    object-fit: contain;
+    background-color: rgba(11, 14, 24, 0.9);
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+  
+  .index_title {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 4px 4px 4px #aaa;
+  }
+  
+  .index_title:hover {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .call_to_action {
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: green;
+    box-shadow: 0 2rem 4rem rgb(11, 14, 24, 0.6);
+  }
+  
+  .main_index_wrapper_secondary_area>a:hover {
+    text-decoration: none;
+  }
+  
+  .call_to_action>h1 {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px #000;
+  }
+  
+  .call_to_action:hover {
+    text-decoration: none;
+    transform: scale(.8);
+  }
+  
+  @media only screen and (min-width: 768px) {
+  
+    /*my_test*/
+    .must_see_image_wrapper {
+      position: relative;
+    }
+  
+    .must-see_image {
+      width: 100%;
+      height: 100%;
+      border: 2px solid white;
+      border-radius: 8px;
+      box-shadow: 0 2rem 4rem rgb(11, 14, 24);
+    }
+  
+    .must-see_image_01 {
+      position: relative;
+      left: 3rem;
+      top: -.9rem;
+      transform: rotate(5deg);
+    }
+  
+    .must-see_image_01:hover {
+      z-index: 100;
+      width: 16rem;
+      height: 20rem;
+    }
+  
+    .must-see_image_02 {
+      position: relative;
+      z-index: 90;
+      left: 2rem;
+      transform: rotate(5deg);
+    }
+  
+    .must-see_image_02:hover {
+      z-index: 120;
+      width: 16rem;
+      height: 20rem;
+    }
+  
+    .must-see_image_03 {
+      position: relative;
+      top: .2rem;
+      z-index: 100;
+    }
+  
+    .must-see_image_03:hover {
+      z-index: 110;
+      width: 16rem;
+      height: 20rem;
+    }
+  
+    .must-see_image_04 {
+      position: relative;
+      z-index: 90;
+      right: 2rem;
+      transform: rotate(-5deg);
+    }
+  
+    .must-see_image_04:hover {
+      z-index: 100;
+      width: 16rem;
+      height: 20rem;
+    }
+  
+    .must-see_image_05 {
+      position: relative;
+      right: 3rem;
+      top: -.9rem;
+      transform: rotate(-5deg);
+    }
+  
+    .must-see_image_05:hover {
+      z-index: 120;
+      width: 16rem;
+      height: 20rem;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .must-see_image {
+      width: 100%;
+      height: 100%;
+      border: 2px solid white;
+      border-radius: 5px;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, .8);
+    }
+  
+    .must_see_image_wrapper {
+      margin-bottom: .5rem;
+    }
+  }
+  
+  /*---------------------------------------End:Index page---------------------------------------------------------------------*/
+  
+ 
+ 
+  /*---Start:popup_american_assassin--*/
+  .popup_american_assassin {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_american_assassin {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_american_assassin:link, .popup_close_american_assassin:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_american_assassin:hover {
+    color: white;
+  }
+  
+  /*---End:popup_american_assassin--*/
+  /*---Start:popup_spectral--*/
+  .popup_spectral {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content__spectral {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_spectral, .popup_close__spectral:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close__spectral:hover {
+    color: white;
+  }
+  
+  /*---End:popup_spectral--*/
+  /*---Start:popup_adrift--*/
+  .popup_adrift {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_adrift {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_adrift, .popup_close_adrift:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_brain_on_fire:hover {
+    color: white;
+  }
+  
+  /*---End:popup_adrift*/
+  /*---Start:popup_forever_my_girl---*/
+  .popup_forever_my_girl {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_forever_my_girl {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_forever_my_girl, .popup_forever_my_girl:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_forever_my_girl:hover {
+    color: white;
+  }
+  
+  /*---End:popup_forever_my_girl---*/
+  /*---Start:popup_lady_bird---*/
+  .popup_lady_bird {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_lady_bird {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_lady_bird, .popup_lady_bird:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_lady_bird:hover {
+    color: white;
+  }
+  
+  /*---End:popup_lady_bird---*/
+  /*---Start:popup_pride_and_prejudice ---*/
+  .popup_pride_and_prejudice {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_pride_and_prejudice {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_pride_and_prejudice, .popup_pride_and_prejudice:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_pride_and_prejudice:hover {
+    color: white;
+  }
+  
+  /*---End:popup_pride_and_prejudice ---*/
+  /*---Start:popup_cranford---*/
+  .popup_cranford {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_cranford {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_cranford, .popup_cranford:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_cranford:hover {
+    color: white;
+  }
+  
+  /*---End:popup_cranford---*/
+  /*---Start:popup_bleak_house---*/
+  .popup_bleak_house {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_bleak_house {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_bleak_house, .popup_bleak_house:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_bleak_house:hover {
+    color: white;
+  }
+  
+  /*---End:popup_bleak_house---*/
+  /*---Start:popup_night_school--*/
+  .popup_night_school {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_night_school {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_night_school, .popup_night_school:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_night_school:hover {
+    color: white;
+  }
+  
+  /*---End:popup_night_school---*/
+  /*---Start:popup_the_layover---*/
+  .popup_the_layover {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_the_layover {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_the_layover, .popup_the_layover:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_the_layover:hover {
+    color: white;
+  }
+  
+  /*---End:popup_the_layover---*/
+  /*---Start:popup_naked---*/
+  .popup_naked {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_naked {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_naked, .popup_naked:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_naked:hover {
+    color: white;
+  }
+  
+  /*---End:popup_naked---*/
+  /*---Start:popup_the_collector---*/
+  .popup_the_collector {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_the_collector {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_the_collector, .popup_the_collector:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_the_collector:hover {
+    color: white;
+  }
+  
+  /*---End:popup_the_collector---*/
+  /*---Start:popup_refuge---*/
+  .popup_refuge {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_refuge {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_refuge, .popup_refuge:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_refuge:hover {
+    color: white;
+  }
+  
+  /*---End:popup_refuge---*/
+  /*---Start:popup_halloween---*/
+  .popup_halloween {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_halloween {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_halloween, .popup_halloween:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_halloween:hover {
+    color: white;
+  }
+  
+  /*---End:popup_halloween---*/
+  /*---Start:popup_tulip_fever---*/
+  .popup_tulip_fever {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_tulip_fever {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_tulip_fever, .popup_tulip_fever:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_tulip_fever:hover {
+    color: white;
+  }
+  
+  /*---End:popup_tulip_fever---*/
+  /*---Start:popup_one_night---*/
+  .popup_one_night {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_one_night {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_one_night, .popup_one_night:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_one_night:hover {
+    color: white;
+  }
+  
+  /*---End:popup_one_night---*/
+  /*---Start:popup_blind_2017---*/
+  .popup_blind_2017 {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_blind_2017 {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_blind_2017, .popup_blind_2017:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_blind_2017:hover {
+    color: white;
+  }
+  
+  /*---End:popup_blind_2017---*/
+  /*---Start:popup_avengers_infinity_war---*/
+  .popup_avengers_infinity_war {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_avengers_infinity_war {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_avengers_infinity_war, .popup_avengers_infinity_war:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_avengers_infinity_war:hover {
+    color: white;
+  }
+  
+  /*---End:popup_avengers_infinity_war---*/
+  /*---Start:popup_black_panther---*/
+  .popup_black_panther {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_black_panther {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .popup_close_black_panther, .popup_black_panther:visited {
+    color: grey;
+    position: absolute;
+    top: 3.5rem;
+    right: 8.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .popup_close_black_panther:hover {
+    color: white;
+  }
+  
+  /*---End:popup_black_panther---*/
+  /*---Start:popup_doctor_strange---*/
+  .popup_doctor_strange {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  :target {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup_content_doctor_strange {
+    width: 65%;
+    height: 30rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+
+  /*------------------------------------------------------End:card------------------------------------------------*/
+  /*-----------------------------------------------End:movies_page----------------------------------------------------------------*/
+
+ 

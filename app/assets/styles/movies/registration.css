@@ -1,0 +1,12 @@
+  /*-----------------------------------------------Start:Registration_page--------------------------------------------------------*/
+  .main-wrapper_registration_page {
+    background-image: url("Registration_page_image/registration_page_image.jpg");
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    border-bottom: 3px solid rgba(0, 0, 0, 1);
+  }
+  
+  /*---------------------------------------------------------End:Registration_page-----------------------------------------------*/

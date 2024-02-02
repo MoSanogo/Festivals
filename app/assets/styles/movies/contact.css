@@ -1,0 +1,32 @@
+ /*------------------------------------------------Contact_Us_page------------------------------------------------------------*/
+ .contact_us_page_main_wrapper {
+    background-image: url('contact_us_images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: color-dodge;
+    border-bottom: 3px solid rgba(0, 0, 0, 1);
+  }
+  
+  .Brooklyn_park_bridge {
+    height: 540px;
+    filter: drop-shadow(8px 8px 10px black);
+  }
+  
+  .contact_us_fa-phone {
+    position: relative;
+    top: 0.5rem;
+    left: -0.5rem;
+  }
+  
+  .contact_us_fa-envelope {
+    position: relative;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  
+  .contact_us_card {
+    box-shadow: 8px 8px 10px black;
+  }
+  
+  /*------------------------------------------End :Contact_Us_page---------------------------------------------------------------*/
