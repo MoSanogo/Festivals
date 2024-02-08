@@ -15,8 +15,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class MovieController extends AbstractController
 {
     #[Route('/', name: 'app_movie_index', methods: ['GET'])]
-    public function index(MovieRepository $movieRepository): Response
+    public function index(MovieRepository $movieRepository, Request $request): Response
     {
+      /*   $result=$movieRepository->findAll();
+        dd($result); */
+        $searchTerm=$request->attributes->get('searchTerm');
+        if(strlen($searchTerm !=0)){
+            return $this->render('movie/index.html.twig', [
+                'movies' => $movieRepository->findBy(array('type'=>$searchTerm)),'title'=>'movies_listing'
+            ]);
+        }
+    
         return $this->render('movie/index.html.twig', [
             'movies' => $movieRepository->findAll(),'title'=>'movies_listing'
         ]);

@@ -49,10 +49,18 @@ class MovieRepository extends ServiceEntityRepository
 
 public function findAllByCategory(){
 
-    return $this->createQueryBuilder('movies')
-              ->select('movie')
-              ->from('Movie','movie')
-              ->groupBy('movie.type');
+/* 
+    $query="SELECT * FROM movie m GROUP BY m.type";
+    $conn=$this->getEntityManager()->getConnection(); */
+
+ /*    return $this->createQueryBuilder('category')
+         ->select('movie.id,movie.type')
+        ->from('App\Entity\Movie','movie')
+        ->groupBy('movie.type')
+        ->getQuery()
+        ->execute(); */
+/*     return $conn->executeQuery($query)
+           ->fetchAllAssociative(); */
 }
 
 
