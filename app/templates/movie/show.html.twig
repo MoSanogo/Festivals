@@ -3,36 +3,40 @@
 {% block title %}Movie{% endblock %}
 
 {% block body %}
-    <h1>Movie</h1>
+<main class="container-fluid">
+ <div class="row">
+      <div class="card col-sm-12 text-center " >
+         <img src="{{asset('build/images/doctor_strange.jpg')}}" class="rounded image-fluid  mt-3 show_movie_image " alt="...">
+         <div class="card-body">
+           <h5 class="card-title">{{movie.title}}</h5>
+           <p class="card-text">{{movie.description}}</p>
+         </div>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item">An item</li>
+           <li class="list-group-item">A second item</li>
+           <li class="list-group-item">A third item</li>
+         </ul>
+         <div class="card-body">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center text-center">
+               <div class="btn btn-primary me-md-2 ">
+               <a href="{{path('app_movie_edit',{'id': movie.id})}}" class="btn btn-primary me-md-2 " >Edit</a>
+               </div>
+               <div class="btn btn-danger me-md-2>
+                  {%include('movie/_delete_form.html.twig')%}
+               </div>
+             </div>
+         </div>
+       </div>
+    </div>
+   
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ movie.id }}</td>
-            </tr>
-            <tr>
-                <th>ReleaseYear</th>
-                <td>{{ movie.releaseYear ? movie.releaseYear|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Url</th>
-                <td>{{ movie.url }}</td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>{{ movie.type }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ movie.description }}</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <a href="{{ path('app_movie_index') }}">back to list</a>
 
-    <a href="{{ path('app_movie_edit', {'id': movie.id}) }}">edit</a>
 
-    {{ include('movie/_delete_form.html.twig') }}
+
+
+
+
+
+</main>
 {% endblock %}

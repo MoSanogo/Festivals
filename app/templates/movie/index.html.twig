@@ -3,116 +3,112 @@
 {%block title%}
 {{title |escape}}
 {%endblock%}
-
 {%block body%}
 <!--The movie page starts here-->
-
 <section class="container movies_listings mt-5 ">
+  <hgroup>
   <h1 class="text-center mt-2">Make your choice !</h1>
   <p class="text-center mt-2 p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quasi earum fugiat voluptas expedita necessitatibus laudantium cupiditate nemo quidem .</p>
+  </hgroup>
+
+  <div class="row justify-content-between align-items-center">
+     <search class="m-auto col-12" style="background-color:#fbfcf7;">
+       {{ form_start(searchForm) }}
+       {{ form_widget(searchForm) }}
+       {{ form_end(searchForm) }}
+     </search>
+  </div>
+<section class="container">
   <h2 class="text-center mt-4 p-2">Movies categories</h2>
-  <div class="container d-none d-md-block">
-    <div class="row my-2 p-2 justify-content-between">
-      {%for link in Types %}
-      <div class="col-sm-2">
-        <a href="{{ path('app_movie_index',{'searchTerm':link}) }}" class="badge rounded-pill text-bg-primary w-100 h-100 ">{{link}}</a>
+  <div class="row my-2 p-2 justify-content-between d-none d-md-flex">
+    {%for link in Types %}
+      <div class="col-sm-2 movie-link-wrapper" > 
+      {%if selected and  link == selected %}
+        <a href="{{ path('app_movie_index',{'searchTerm':link}) }}" 
+            class="badge rounded-pill text-bg-success w-100 h-100" style="text-decoration:none;">{{link}}
+        </a>
+      {%else%}
+        <a href="{{ path('app_movie_index',{'searchTerm':link}) }}" class="badge rounded-pill text-bg-primary w-100 h-100" style="text-decoration:none;">{{link}}
+        </a>
+      {%endif%}
       </div>
-      {%endfor%}
-
-</div> 
-  </div>
-  <div class="container d-md-none">
-    <div class="row my-2 p-2 justify-content-between">
-       <a href="#action" class=" col-sm-12 badge badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5 " style="text-decoration:none;">Action</a>
-
-      <a href="#dramas" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5 ">Dramas</a>
-
-      <a href="#classics" class=" col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Classics</a>
-
-      <a href="#comedies" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Comedies</a>
-
-      <a href="#horror" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Horror</a>
-
-      <a href="#romance" class="col-sm-12 badge badge-pill badge-secondary bg-primary border-bottom pt-3 pb-3 pr-5 pl-5">Romance</a>
-
-      <a href="#sci-fi" class="col-sm-12 badge badge-pill badge-secondary bg-primary pt-3 pb-3 pr-5 pl-5">Sci-Fi</a>
-
-    </div>
-  </div>
-
-  <div class="container" id="action">
-
-    <div class="row card-group " id="action">
-      <!--Start:The Equalizer-->
-    {%for movie in movies %}
-    <div class="col-sm-4  card_wrapper mt-5 " id="card_wrapper" >
-      <div class="row">
-        <div class="col-sm-12   card_front_side_wrapper">
-          <div class="card card_front_side  card_side col-sm-12 ">
-            <img src="{{asset('build/images/doctor_strange.jpg')}}" alt="The Equalizer" class="card-img-top" style="height:25rem;"/>
-            <div class="card-body">
-              <h5 class="card-title text-center">{{movie.url}}</h5>
-              <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, facere.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12  text-center    card_backside_side_wrapper">
-          <div class="card card_back_side card_side col-sm-12  ">
-            <div class="card-body ">
-              <h5 class="card-title mt-2">{{movie.url}}</h5>
-              <div class="row">
-                <div class="col-sm-12">
-                  <p class="p-2 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut libero ipsa sit aliquam molestias veniam quia ullam nulla error, earum fugiat magni.
-                  </p>
-                </div>
-                <div class="col-sm-12 table-responsive-sm-12">
-                  <table class="table table-hover">
-                    <tr>
-                      <th scope="row">
-                        Directors:
-                      </th>
-                      <td>Antoine Fuqua</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Writers:</th>
-                      <td classs="text-truncate">Richard Wenk Michael Sloan.</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        Stars:
-                      </th>
-                      <td>Denzel Washington, Pedro Pascal, Ashton Sanders</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="col-sm-12 mt-1 ">
-                <div class="col-sm-12">
-                  <h5 class="text-monospace font-weight-c">Showtime</h5>
-                  <p>Monday 15th at 6:30pm</p>
-                </div>
-                <div class="col-sm-12 d-none d-md-block"><a href="#{{movie.id}}" class="badge badge-pill badge-secondary d-block bg-primary border-bottom ">Watch the trailer</a></div>
-                <div class="col-sm-12 d-md-none"><a href="{{movie.id}}" class="badge badge-pill badge-secondary bg-primary border-bottom d-block" target="_blank">Trailer youtube</a></div>
-                <div class="col-sm-12"><a href="registration_page.html" class="badge badge-pill badge-secondary bg-success d-block">Book it now!</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   </div>
     {%endfor%}
-   
-
-      
+ </div> 
+ <div class="row my-2 p-2 justify-content-between d-md-none">
+  {%for link in Types %}
+  {%if selected and  link == selected  %}
+  <a href="{{ path('app_movie_index',{'searchTerm':link}) }}" class=" col-sm-12 badge rounded-pill text-bg-success border-bottom pt-3 pb-3 pr-5 pl-5 " style="text-decoration:none;">{{link}}</a>
+  {%else%}
+  <a href="{{ path('app_movie_index',{'searchTerm':link}) }}" class=" col-sm-12 badge rounded-pill bg-primary border-bottom pt-3 pb-3 pr-5 pl-5 " style="text-decoration:none;">{{link}}</a>
+  {%endif%}
+  {%endfor%}
+ </div>
+ <div class="row card-group mb-3" id="action">
+  <!--Start:The Equalizer-->
+{%for movie in movies %}
+<div class="col-sm-4  card_wrapper " id="card_wrapper" >
+  <div class="row">
+    <div class="col-sm-12   card_front_side_wrapper">
+      <div class="card card_front_side  card_side col-sm-12 ">
+        <img src="{{asset('build/images/doctor_strange.jpg')}}" alt="The Equalizer" class="card-img-top" style="height:22.5rem;"/>
+        <div class="card-body">
+          <h5 class="card-title text-center">{{movie.title}}</h5>
+          <p class="text-center">{{movie.description[0:50]}} ...</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12  text-center    card_backside_side_wrapper">
+      <div class="card card_back_side card_side col-sm-12  ">
+        <div class="card-body ">
+          <h5 class="card-title mt-2">{{movie.title}}</h5>
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="p-2 text-justify">{{movie.description[0:70]}}
+              </p>
+            </div>
+            <div class="col-sm-12 table-responsive-sm-12">
+              <table class="table table-hover">
+                <tr>
+                  <th scope="row">
+                    Directors:
+                  </th>
+                  <td>
+                {{movie.directors | join(',')}}
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Writers:</th>
+                  <td classs="text-truncate">  {{movie.writers | join(',')}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Stars:
+                  </th>
+                  <td>  {{movie.stars | join(',')}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="col-sm-12 mt-1 ">
+            <div class="col-sm-12">
+              <h5 class="text-monospace font-weight-c">Showtime</h5>
+              <p>Monday 15th at 6:30pm</p>
+            </div>
+            <div class="col-sm-12 d-none d-md-block"><a href="#{{movie.id}}" class="badge badge-pill badge-secondary d-block bg-primary border-bottom ">Watch the trailer</a></div>
+            <div class="col-sm-12 d-md-none"><a href="{{movie.id}}" class="badge badge-pill badge-secondary bg-primary border-bottom d-block" target="_blank">Trailer youtube</a></div>
+            <div class="col-sm-12"><a href="registration_page.html" class="badge badge-pill badge-secondary bg-success d-block">Book it now!</a></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-
-
+</div>
+{%endfor%}     
+</div>
 </section>
-
+</section>
 {%for movie in movies%}
-<div class="container d-none d-md-block">
+<section class="container d-none d-md-block">
     <div class="row ">
       <div class="popup col-sm-12" id="{{movie.id}}">
         <div class="col-sm-12 popup_close_wrapper"><a href="{{path('app_movie_index')}}" class="popup_close">&times;</a></div>
@@ -121,8 +117,7 @@
         </div>
     </div>
     </div>
-  </div>
+  </section>
 {%endfor%}
-
 {%endblock%}
 

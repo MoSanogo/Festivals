@@ -1,5 +1,4 @@
-
- .main-wrapper_movies_page {
+.main-wrapper_movies_page {
     background-color: rgba(255, 255, 255, 1), ;
   }
   
@@ -8,13 +7,13 @@
   .card_wrapper {
 
     position: relative;
-    height:30rem;
-    margin-bottom: 2.5rem;
+    height:35rem;
+    margin-bottom: 0.5rem;
+    overflow:hidden;
+
   }
   
-
-  
-  .card_side {
+.card_side {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,7 +29,8 @@
     border-width: 3px;
     border-radius: 6px;
     box-shadow: 4px 4px 4px 4px grey;
- 
+    height: 34.5rem;
+   
   }
   
   .card_front_side {
@@ -111,5 +111,7 @@
   .popup_close:hover {
     color: red;
   }
+
+
   
   /*---End:Popup_the_equalizer_2--*/

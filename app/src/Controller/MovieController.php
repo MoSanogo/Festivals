@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Movie;
 use App\Form\MovieType;
+use App\Form\MovieSearchType;
 use App\Repository\MovieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,17 +18,26 @@ class MovieController extends AbstractController
     #[Route('/', name: 'app_movie_index', methods: ['GET'])]
     public function index(MovieRepository $movieRepository, Request $request): Response
     {
-      /*   $result=$movieRepository->findAll();
-        dd($result); */
-        $searchTerm=$request->attributes->get('searchTerm');
+        
+     
+       
+        $searchForm=$this->createForm(MovieSearchType::class,null,[
+            'method' => 'GET'
+        ]);
+        $searchTerm=$request->query->get('searchTerm');
+        // dd($movieRepository->findBy(array('category'=>$searchTerm)));
         if(strlen($searchTerm !=0)){
             return $this->render('movie/index.html.twig', [
-                'movies' => $movieRepository->findBy(array('type'=>$searchTerm)),'title'=>'movies_listing'
+                'movies' => $movieRepository->findBy(array('category'=>$searchTerm)),'title'=>'movies_listing',
+                'selected'=>$searchTerm,
+                'searchForm'=>$searchForm
             ]);
         }
     
         return $this->render('movie/index.html.twig', [
-            'movies' => $movieRepository->findAll(),'title'=>'movies_listing'
+            'movies' => $movieRepository->findAll(),'title'=>'movies_listing',
+            'selected'=>$searchTerm,
+            'searchForm'=>$searchForm
         ]);
     }
 
@@ -35,7 +45,8 @@ class MovieController extends AbstractController
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $movie = new Movie();
-        $form = $this->createForm(MovieType::class, $movie);
+        $form = $this->createForm(MovieType::class,$movie);
+    
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

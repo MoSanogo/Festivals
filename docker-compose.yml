@@ -5,9 +5,8 @@ services:
   database:
       container_name: database_container
       image: mysql:8.3.0
-      restart: always
-      environment:
-     
+
+      environment:    
            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
            MYSQL_DATABASE: ${MYSQL_DATABASE}
            MYSQL_USER: ${MYSQL_USER}

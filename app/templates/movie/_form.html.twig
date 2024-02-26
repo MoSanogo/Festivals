@@ -1,4 +1,11 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+   <div class="row">
+    <div class="col text-center">
+        <button class="btn btn-primary btn-sm">{{ button_label|default('Save') }}</button>   
+   </div>
+   <div class="col">
+    <a href="{{ path('app_movie_index') }}" class="btn btn-danger btn-sm" role="button">back to list</a> 
+   </div>
+   </div>
 {{ form_end(form) }}

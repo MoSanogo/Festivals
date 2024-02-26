@@ -1,9 +1,9 @@
-@import './movies/movie_listing.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+@import './movies/movie_listing.css';
+@import './movies/movie_show.css';
 
 body {
     margin-top: 45px;
